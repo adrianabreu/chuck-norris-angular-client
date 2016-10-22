@@ -1,9 +1,15 @@
-<main>
-  <h1 class="title">Hello from Angular !</h1>
-
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/img/logo.png">
+<main>  
+  <div class="container">
+    <div class="jumbotron">
+      <!-- app es el alias del controller definido con controllerAs -->	
+      <h1>{{app.title}}</h1>
+      <input type="text" name="title" ng-model="app.title">
+      <p>Let's do it</p>
+    </div>
+    <!-- Images (and assets) are parsed and loaded from within the public directory -->  
+    <!-- <img src="/img/logo.png" class="img-thumbnail"> -->
+  </div>
 </main>
 <footer>
-  <a ng-href="{{app.url}}">Webpack Angular Starter</a>
+  
 </footer>

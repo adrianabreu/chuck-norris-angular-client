@@ -1,0 +1,475 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"get_by_name"
+			],
+			[
+				"ge",
+				"get_by_id_filter"
+			],
+			[
+				"g",
+				"get_by_name_filter"
+			],
+			[
+				"bui",
+				"builded_query_content_state"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"re",
+				"response"
+			],
+			[
+				"query_",
+				"Query_content"
+			],
+			[
+				"fet",
+				"fetching"
+			],
+			[
+				"q",
+				"query_id"
+			],
+			[
+				"lo",
+				"loggerMiddleware"
+			],
+			[
+				"redu",
+				"redux_query_action"
+			],
+			[
+				"query",
+				"query_id"
+			],
+			[
+				"qe",
+				"query_data"
+			],
+			[
+				"set",
+				"set_query_data"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"le",
+				"lenght"
+			],
+			[
+				"queries",
+				"queries_list"
+			],
+			[
+				"quer",
+				"query_id"
+			],
+			[
+				"pr",
+				"props"
+			],
+			[
+				"que",
+				"query_id"
+			],
+			[
+				"qu",
+				"query_id"
+			],
+			[
+				"add",
+				"add_query"
+			],
+			[
+				"red",
+				"redux_query_action"
+			],
+			[
+				"nombre",
+				"nombre-paquete"
+			],
+			[
+				"ex",
+				"expected_action"
+			],
+			[
+				"c",
+				"console"
+			],
+			[
+				"ADD",
+				"ADD_QUERY_NODE"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 362.0,
+		"last_filter": "view",
+		"selected_items":
+		[
+			[
+				"view",
+				"View: Toggle Side Bar"
+			],
+			[
+				"view ",
+				"View: Toggle Side Bar"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mard",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdo",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"babal",
+				"Preferences: Babel – Default"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"VIR",
+				"View: Toggle Side Bar"
+			],
+			[
+				"Git: ",
+				"Git: Commit"
+			],
+			[
+				"Git:add",
+				"Git: Add..."
+			],
+			[
+				"Git",
+				"Git: Init"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"package controll ",
+				"Package Control: Install Package"
+			],
+			[
+				"view le",
+				"View: Toggle Open Files in Side Bar"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/necseron/Documentos/CodeSchool/scopes.js",
+		"/home/necseron/Documentos/CodeSchool/scopes.html",
+		"/home/necseron/Proyectos/Sqlatch/src/redux/query/reducers.js",
+		"/home/necseron/Proyectos/Sqlatch/src/react/components/query-content.jsx",
+		"/home/necseron/Proyectos/Sqlatch/src/index.jsx",
+		"/home/necseron/Proyectos/Sqlatch/src/redux/query/actions-creator.js",
+		"/home/necseron/Documentos/pwd.txt",
+		"/home/necseron/Proyectos/Sqlatch/test/redux-query-reducers-test.js",
+		"/home/necseron/Proyectos/Sqlatch/test/redux-query-actions-test.js",
+		"/home/necseron/Proyectos/Sqlatch/.babelrc",
+		"/home/necseron/Proyectos/Sqlatch/package.json",
+		"/home/necseron/Proyectos/Sqlatch/README.md",
+		"/home/necseron/Proyectos/Sqlatch/src/react/containers/visible-query-content.js",
+		"/home/necseron/Proyectos/Sqlatch/node_modules/html-webpack-plugin/node_modules/bluebird/js/browser/bluebird.js",
+		"/home/necseron/Proyectos/Sqlatch/src/redux/query/types.js",
+		"/home/necseron/Documentos/js.txt",
+		"/home/necseron/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/necseron/Descargas/menuIzquierda.js",
+		"/home/necseron/Descargas/cuadroDeslizable.js",
+		"/home/necseron/Descargas/header.js",
+		"/home/necseron/Descargas/scrollGhibli.js",
+		"/home/necseron/Descargas/controlPanel.js",
+		"/home/necseron/Descargas/returnHp.js",
+		"/home/necseron/Descargas/newPost.js",
+		"/home/necseron/Descargas/indexScripts.js",
+		"/home/necseron/Descargas/index.php",
+		"/home/necseron/Descargas/indexPrintClass.php",
+		"/home/necseron/Proyectos/Sqlatch/src/redux/combined-reducers.js",
+		"/home/necseron/Proyectos/Sqlatch/test/redux-query-actions-creator.js",
+		"/home/necseron/Proyectos/Sqlatch/src/redux/model.js",
+		"/home/necseron/Proyectos/Sqlatch/src/redux/query/actions.js",
+		"/home/necseron/Proyectos/hibernate-spring/src/main/java/com/todohibernate/entities/Todo.java",
+		"/home/necseron/Proyectos/hibernate-spring/src/main/java/com/todohibernate/dao/TodoDao.java",
+		"/home/necseron/Proyectos/hibernate-spring/src/main/java/com/todohibernate/dao/impl/TodoDaoImpl.java",
+		"/home/necseron/Proyectos/Sqlatch/src/index.css",
+		"/tmp/23.html",
+		"/home/necseron/.config/sublime-text-3/Packages/Babel/Babel.sublime-settings",
+		"/home/necseron/Proyectos/Sqlatch/src/template.html",
+		"/home/necseron/Proyectos/Sqlatch/src/index.html",
+		"/home/necseron/Proyectos/Sqlatch/src/app/main.jsx",
+		"/home/necseron/Proyectos/Sqlatch/src/app/launcher.js",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/redux/types.js",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/redux/reducers.js",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/redux/creators.js",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/index.html",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/main.jsx",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/launcher.js",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/timeIndicator.jsx",
+		"/tmp/137.html",
+		"/home/necseron/Proyectos/Sqlatch/webpack.config.js",
+		"/home/necseron/Proyectos/react-webpack-babel/src/template.html",
+		"/home/necseron/Proyectos/Sqlatch/webpack.production.config.js",
+		"/home/necseron/Proyectos/Sqlatch/src/main.jsx",
+		"/home/necseron/Proyectos/react-webpack-babel/package.json",
+		"/home/necseron/Proyectos/react-webpack-babel/src/index.jsx",
+		"/home/necseron/Proyectos/react-webpack-babel/src/react/components/app.jsx",
+		"/home/necseron/Proyectos/react-webpack-babel/src/react/containers/visible-query-content.js",
+		"/home/necseron/Proyectos/Sqlatch/src/app/react/containers/visible-query-content.js",
+		"/home/necseron/Proyectos/react-webpack-babel/src/react/components/query-content.jsx",
+		"/home/necseron/Proyectos/Sqlatch/src/app/react/components/query-content.jsx",
+		"/home/necseron/Proyectos/Sqlatch/src/app/react/components/app.jsx",
+		"/home/necseron/Proyectos/react-webpack-babel/node_modules/font-awesome/css/font-awesome.css",
+		"/home/necseron/Proyectos/react-webpack-babel/node_modules/bootstrap/dist/css/bootstrap.css",
+		"/home/necseron/Proyectos/Sqlatch/src/assets/style/style.less",
+		"/home/necseron/Proyectos/ES2015/main.js",
+		"/home/necseron/Proyectos/Sqlatch/src/app/redux/query/actions.js",
+		"/home/necseron/Proyectos/Sqlatch/src/app/redux/query/reducers.js",
+		"/home/necseron/Proyectos/Sqlatch/src/app/redux/query/types.js",
+		"/home/necseron/Proyectos/Sqlatch/src/app/redux/combined-reducers.js",
+		"/home/necseron/Proyectos/react-webpack-babel/src/redux/query/types.js",
+		"/home/necseron/Proyectos/react-webpack-babel/src/redux/query/reducers.js",
+		"/home/necseron/Proyectos/react-webpack-babel/src/redux/query/actions.js",
+		"/home/necseron/Proyectos/react-webpack-babel/src/redux/combined-reducers.js",
+		"/home/necseron/Proyectos/Sqlatch/.gitignore",
+		"/home/necseron/Proyectos/react-webpack-babel/src/redux/types.js",
+		"/home/necseron/Proyectos/react-webpack-babel/.gitignore",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/redux/query/reducers.js",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/redux/query/actions.js",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/redux/query/types.js",
+		"/home/necseron/Proyectos/react-webpack-babel/src/test/test.js",
+		"/home/necseron/Proyectos/react-webpack-babel/src/test-folder/test-file.js",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/react/components/app.jsx",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/react/components/query-content.jsx",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/redux/combined-reducers.js",
+		"/home/necseron/Proyectos/Sqlatch/sqlatch-app/app/react/containers/visible-query-content.js",
+		"/home/necseron/Proyectos/react-webpack-babel/webpack.loaders.js",
+		"/home/necseron/Proyectos/react-webpack-babel/webpack.config.js",
+		"/home/necseron/Proyectos/react-webpack-babel/src/index.css",
+		"/home/necseron/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/necseron/Descargas/pnivellol/pnivellol-webapp/src/main/java/com/pnivellol/webapp/controller/ServiceController.java",
+		"/home/necseron/Descargas/pnivellol/pnivellol-webapp/src/main/java/com/pnivellol/webapp/controller/DoController.java"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"q.",
+			"q",
+			"_queries_add_query_node",
+			"_queries_1",
+			"_queries_2",
+			"_queries_1",
+			"queries_3",
+			"_queries",
+			"redux_query_actions",
+			"reduxQueryTypes",
+			"];\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 114.0
+	},
+	"output.markdown":
+	{
+		"height": 114.0
+	},
+	"pinned_build_system": "",
+	"project": "angular-chuck-webpack.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
