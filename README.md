@@ -2,6 +2,9 @@
 
 A client for the chuck API.
 
+### Try live!
+
+[https://aabreuglez.github.io/chuck-norris-angular-client/](https://aabreuglez.github.io/chuck-norris-angular-client/)
 
 ### Tasks:
 
@@ -10,8 +13,8 @@ A client for the chuck API.
 3. Grab filters [Done]
 4. Apply filters dynamic [Done]
 5. Make routing /sentence [Done]
-6. Create historical component
-7. Create historical filters
+6. Create historical component [Done]
+7. Create historical filters [Done]
 8. Apply filter on historical (refactor old filters)
 9. Manage cache
 
@@ -21,4 +24,5 @@ A client for the chuck API.
 npm install --save angular-resource
 npm install --save angular-route
 npm install --save bootstrap 
+npm install --save lodash
 ```
