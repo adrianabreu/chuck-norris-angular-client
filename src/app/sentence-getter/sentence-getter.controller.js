@@ -1,8 +1,8 @@
 export default class SentenceGetterController {
   constructor(pService,$sce) {
   	this.$sce     = $sce;
-	this.service  = pService;
-	this.sentence = $sce.trustAsHtml('let\'s get it');
+	  this.service  = pService;
+	  this.sentence = $sce.trustAsHtml('let\'s get it');
   }
 
   get(){

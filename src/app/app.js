@@ -10,12 +10,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/app.css';
 
 import sentenceGetter from './sentence-getter/sentence-getter.js';
+import sentenceFilter from './sentence-filter/sentence-filter.js';
 
 const MODULE_NAME  = 'chuck';
 const DEPENDENCIES = [
   ngRoute,
   ngResource,
-  sentenceGetter
+  sentenceGetter,
+  sentenceFilter
 ];
 
 angular
