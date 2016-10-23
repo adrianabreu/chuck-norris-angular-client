@@ -8,8 +8,10 @@ export default class SentenceGetterController {
   }
 
   get(){
-  	this.getterService
-  		.get()
+    this.getterService
+  		.get({
+        limitTo : this.filterService.get()
+      })
   		.$promise
   		.then((data)=>{
   			this.sentence = this.$sce.trustAsHtml(data.value.joke);
