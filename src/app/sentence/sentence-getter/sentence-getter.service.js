@@ -1,5 +1,5 @@
 export default function sentenceGetterService($log, $resource, sentenceHistoricalService){
-	return $resource('http://api.icndb.com/jokes/random', {}, {
+	return $resource('https://api.icndb.com/jokes/random', {}, {
 		get : {
 			interceptor : {
 				response : function(response) {
