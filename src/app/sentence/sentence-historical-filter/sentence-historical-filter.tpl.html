@@ -1,0 +1,14 @@
+<div class="btn-group btn-group-justified">
+      <a
+      ng-repeat="category in sentenceHistoricalFilter.getHistoricalCategories()" 
+      ng-click="sentenceHistoricalFilter.addFilter(category)"
+      ng-class  = "(sentenceHistoricalFilter.isActiveFilter(category) ? 'btn btn-primary' : 'btn btn-default')"
+      >
+      	{{category}}
+      </a>           
+      <a href=""
+      class="btn btn-default"
+      ng-click="sentenceHistoricalFilter.clearFilter()">
+      clear
+      </a>
+</div>

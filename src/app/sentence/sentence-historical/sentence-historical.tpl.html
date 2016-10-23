@@ -6,6 +6,8 @@
         <ul class="list-group">
             <li 
             ng-repeat="sentence in sentenceHistorical.getSentences() | orderBy:'':true"
+            ng-if="sentenceHistorical.categoryIsSelected(sentence.categories) 
+                    || sentenceHistorical.categoryFilterIsEmpty()"
             ng-bind-html="sentenceHistorical.trustAsHtml(sentence.joke)"
             class="list-group-item"
             > </li>

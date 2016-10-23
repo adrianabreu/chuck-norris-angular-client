@@ -1,4 +1,4 @@
-export default class SentenceFiltersController {
+export default class SentenceFilterController {
 
   constructor($log, getterService, filterService) {
     this.filters       = [];    
@@ -18,7 +18,7 @@ export default class SentenceFiltersController {
   }
 
   addFilter(pFilter) {
-      this.$log.debug('SentenceFiltersController.addFilter:'+ pFilter);
+      this.$log.debug('SentenceFilterController.addFilter:'+ pFilter);
       this.filterService.add(pFilter);
   }
 
@@ -31,7 +31,7 @@ export default class SentenceFiltersController {
   }
 }
 
-SentenceFiltersController.$inject = [
+SentenceFilterController.$inject = [
   '$log',
   'sentenceFilterGetterService', 
   'sentenceFilterService'

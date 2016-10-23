@@ -6,6 +6,7 @@ export default function sentenceGetterService($log, $resource, sentenceHistorica
 					$log.debug('sentenceGetterService.get::', response.data.value);
 					
 					sentenceHistoricalService.add(response.data.value);
+					sentenceHistoricalService.addCategory(response.data.value.categories);
 					return response.data.value;
 				}
 			}
