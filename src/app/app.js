@@ -9,33 +9,30 @@ import ngResource from 'angular-resource';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/app.css';
 
-import sentenceGetter from './sentence-getter/sentence-getter.js';
-import sentenceFilter from './sentence-filter/sentence-filter.js';
+// import sentenceGetter from './sentence-getter/sentence-getter.js';
+// import sentenceFilter from './sentence-filter/sentence-filter.js';
+import sentence from './sentence/sentence.js';
 
 const MODULE_NAME  = 'chuck';
 const DEPENDENCIES = [
   ngRoute,
   ngResource,
-  sentenceGetter,
-  sentenceFilter
+  sentence
 ];
 
 angular
   .module(MODULE_NAME, DEPENDENCIES)
-  // .controller('SentenceGetterController',SentenceGetterController)
   .run(function(){
     // console.log(this);
   })
-  .config(function($httpProvider,$logProvider,$routeProvider){
-
+  .config(function($logProvider,$routeProvider){
     // todo ... env variable
-    $logProvider.debugEnabled(true);
-    // console.log($routeProvider);
-    // $routeProvider
-    //   .when('/...', {
-    //     templateUrl: '',
-    //     controller: ''
-    //   })
+    $logProvider.debugEnabled(true);    
+    // initial redirection
+    $routeProvider
+      .otherwise({
+        redirectTo: '/sentence'
+      });
   });
 
 export default MODULE_NAME;

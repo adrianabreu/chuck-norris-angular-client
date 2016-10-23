@@ -1,11 +1,11 @@
 <div class="btn-group btn-group-justified">
-      <a href="#"
+      <a href=""
         ng-class  = "(sentenceFilter.isActiveFilter(filter) ? 'btn btn-primary' : 'btn btn-default')"
         ng-repeat = "filter in sentenceFilter.filters"
         ng-click  = "sentenceFilter.addFilter(filter)">
         {{ filter }}
         </a>
-      <a href="#"
+      <a href=""
       class="btn btn-default"
       ng-click="sentenceFilter.clearFilter()">
       clear
