@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+    <h5>Historical</h5>
+    </div>
+    <div class="panel-body text-center">
+        <ul class="list-group">
+            <li 
+            ng-repeat="sentence in sentenceHistorical.getSentences()"
+            ng-bind-html="sentenceHistorical.trustAsHtml(sentence.joke)"
+            class="list-group-item"
+            > </li>
+        </ul>
+    </div>
+</div> 
