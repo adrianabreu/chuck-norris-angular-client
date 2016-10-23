@@ -27,6 +27,9 @@ angular
     // console.log(this);
   })
   .config(function($httpProvider,$logProvider,$routeProvider){
+
+    // todo ... env variable
+    $logProvider.debugEnabled(true);
     // console.log($routeProvider);
     // $routeProvider
     //   .when('/...', {
