@@ -1,12 +1,14 @@
 export default class SentenceGetterController {
-  constructor(pService,$sce) {
-  	this.$sce     = $sce;
-	  this.service  = pService;
-	  this.sentence = $sce.trustAsHtml('let\'s get it');
+
+  constructor($sce,getterService,filterService ) {
+  	this.$sce           = $sce;
+	  this.getterService  = getterService;
+		this.filterService  = filterService;
+	  this.sentence       = $sce.trustAsHtml('let\'s get it');
   }
 
   get(){
-  	this.service
+  	this.getterService
   		.get()
   		.$promise
   		.then((data)=>{
@@ -15,4 +17,8 @@ export default class SentenceGetterController {
   }
 }
 
-SentenceGetterController.$inject = ['sentenceGetterService','$sce'];
+SentenceGetterController.$inject = [
+	'$sce', 
+	'sentenceGetterService',
+	'sentenceFilterService'
+];

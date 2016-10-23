@@ -9,6 +9,7 @@ A client for the chuck API.
 2. Apply static filters  
 3. Grab filters [Done]
 4. Apply filters dynamic
+5. Make routing /sentence
 
 ### Extra packages added
 

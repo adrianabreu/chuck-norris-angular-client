@@ -1,18 +1,34 @@
 export default class SentenceFiltersController {
-  constructor(pService) {
+
+  constructor(getterService, filterService) {
     this.filters  = [];
-	this.service  = pService;
+
+	  this.getterService  = getterService;
+    this.filterService  = filterService;
+
     this.get();
   }
 
   get(){
-    this.service
+    this.getterService
   		.get()
   		.$promise
   		.then((data)=>{
   			this.filters = data.value;
   		});
   }
+
+  addFilter(pFilter) {
+      this.filterService.add(pFilter);
+  }
+
+  isActiveFilter(pFilter) {
+      return this.filterService.isActive(pFilter);
+  }
+
+  clearFilter() {
+      this.filterService.clear();
+  }
 }
 
-SentenceFiltersController.$inject = ['sentenceFilterService'];
+SentenceFiltersController.$inject = ['sentenceFilterGetterService', 'sentenceFilterService'];
