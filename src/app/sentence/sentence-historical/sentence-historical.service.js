@@ -20,5 +20,4 @@ export default class sentenceHistoricalService {
     getCategories(){
     	return this.categories;
     }
-    
 }
