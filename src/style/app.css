@@ -30,3 +30,7 @@ footer {
   max-height: 250px;
   overflow-y: auto;
 }
+
+#navbar{
+  margin-top: 10px;
+}

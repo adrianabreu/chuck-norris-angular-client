@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/app.css';
+import '../style/bootstrap.theme.min.css';
 
 import angular    from 'angular';
 import ngRoute    from 'angular-route';
