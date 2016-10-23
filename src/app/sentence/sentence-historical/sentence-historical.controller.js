@@ -1,7 +1,7 @@
 export default class SentenceHistoricalController {
 
   constructor($sce,sentenceHistoricalService) {
-      this.$sce               = $sce;
+    this.$sce               = $sce;
 	  this.historicalService  = sentenceHistoricalService;
   }
 

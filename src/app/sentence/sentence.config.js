@@ -1,4 +1,4 @@
-export default function($routeProvider){
+export default function sentenceConfig($routeProvider){
   $routeProvider
     .when('/sentence', {
       template: require('./sentence.tpl.html'),
@@ -6,3 +6,5 @@ export default function($routeProvider){
       controllerAs : 'Sentence'
     })
 }
+
+sentenceConfig.$inject = ['$routeProvider'];
