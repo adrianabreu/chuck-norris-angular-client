@@ -2,6 +2,7 @@
 body {
   /*background: #0147A7;*/
   /*color: #fff;*/
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -19,4 +20,13 @@ main {
 footer {
   text-align: center;
   font-size: 0.8em;
+}
+
+#blockquote-sentence-getter{
+  font-family: 'Kalam', cursive;
+}
+
+#panel-body-sentence-historical{
+  max-height: 250px;
+  overflow-y: auto;
 }

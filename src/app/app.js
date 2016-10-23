@@ -27,7 +27,7 @@ angular
   })
   .config(function($logProvider,$routeProvider){
     // todo ... env variable
-    $logProvider.debugEnabled(true);    
+    $logProvider.debugEnabled(!true);    
     // initial redirection
     $routeProvider
       .otherwise({

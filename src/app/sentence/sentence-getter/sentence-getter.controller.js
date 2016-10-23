@@ -4,10 +4,12 @@ export default class SentenceGetterController {
   	this.$sce              = $sce;
 	  this.getterService     = getterService;
 		this.filterService     = filterService;
+    this.sentenceRequested = false;
 	  this.sentence          = $sce.trustAsHtml('let\'s get it');
   }
 
   get(){
+    this.sentenceRequested = true;
     this.getterService
   		.get({
         limitTo : this.filterService.get()

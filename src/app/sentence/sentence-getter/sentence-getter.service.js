@@ -1,9 +1,10 @@
-export default function sentenceGetterService($resource, sentenceHistoricalService){
+export default function sentenceGetterService($log, $resource, sentenceHistoricalService){
 	return $resource('http://api.icndb.com/jokes/random', {}, {
 		get : {
 			interceptor : {
 				response : function(response) {
-					console.log(response.data);
+					$log.debug('sentenceGetterService.get::', response.data.value);
+					
 					sentenceHistoricalService.add(response.data.value);
 					return response.data.value;
 				}
@@ -12,4 +13,8 @@ export default function sentenceGetterService($resource, sentenceHistoricalServi
 	});
 }
 
-sentenceGetterService.$inject = ['$resource', 'sentenceHistoricalService'];
+sentenceGetterService.$inject = [
+	'$log',
+	'$resource', 
+	'sentenceHistoricalService'
+];

@@ -5,7 +5,10 @@
   		type="button control-group" class="btn btn-default btn-block">GET IT
   	</button>	
   </div>
-  <div class="panel-body text-center" ng-bind-html="sentenceGetter.sentence">  	  	
+  <div class="panel-body text-center">  	  	
   	<hr>
+  	<blockquote ng-bind-html="sentenceGetter.sentence" id="blockquote-sentence-getter">
+  	</blockquote>
+  	<footer ng-if="sentenceGetter.sentenceRequested"><i>Chuck Norris</i></footer>
   </div>
 </div>
