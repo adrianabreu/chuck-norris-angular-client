@@ -1,11 +1,15 @@
 ## Angular-chuck-api
 
-A client for the chuck API.
+A client for Chuck Norris' API made in AngularJS & Webpack.
 
 ### Try live!
 
 [https://aabreuglez.github.io/chuck-norris-angular-client/](https://aabreuglez.github.io/chuck-norris-angular-client/)
 
+### Screenshots
+
+![Index](assets/1.PNG)
+![Querying](assets/2.PNG)
 ### Tasks:
 
 1. Grab a sentence [Done]
@@ -17,6 +21,7 @@ A client for the chuck API.
 7. Create historical filters [Done]
 8. Apply filter on historical (refactor old filters)
 9. Manage cache
+
 
 ### Extra packages added
 
