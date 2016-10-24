@@ -10,6 +10,7 @@ A client for Chuck Norris' API made in AngularJS & Webpack.
 
 ![Index](assets/1.PNG)
 ![Querying](assets/2.PNG)
+
 ### Tasks:
 
 1. Grab a sentence [Done]
@@ -19,8 +20,8 @@ A client for Chuck Norris' API made in AngularJS & Webpack.
 5. Make routing /sentence [Done]
 6. Create historical component [Done]
 7. Create historical filters [Done]
-8. Apply filter on historical (refactor old filters)
-9. Manage cache
+8. Apply filter on historical (refactor old filters) [Done]
+9. Manage cache [Need to add a button for cleaning cache]
 
 
 ### Extra packages added
@@ -30,4 +31,5 @@ npm install --save angular-resource
 npm install --save angular-route
 npm install --save bootstrap 
 npm install --save lodash
+npm install --save ngstorage
 ```
