@@ -1,6 +1,6 @@
 export default class SentenceHistoricalController {
 
-  constructor($sce,sentenceHistoricalService, sentenceHistoricalFilterService) {
+  constructor($sce, sentenceHistoricalService, sentenceHistoricalFilterService) {
     this.$sce                    = $sce;
     this.historicalService       = sentenceHistoricalService;
     this.historicalFilterService = sentenceHistoricalFilterService;
@@ -15,21 +15,17 @@ export default class SentenceHistoricalController {
   }  
 
   categoryIsSelected(category){
-    // console.log('categoryIsSelected: ', category);
-    // console.log('isActive: ', this.historicalFilterService.isActive(category));
-
-    
-    // console.log(category);
     return this.historicalFilterService.isActive(category);
   }
 
   categoryFilterIsEmpty(){
     return this.historicalFilterService.isEmpty();
   }
+
 }
 
 SentenceHistoricalController.$inject = [
-	'$sce', 
+	'$sce',
 	'sentenceHistoricalService',
   'sentenceHistoricalFilterService'
 ];

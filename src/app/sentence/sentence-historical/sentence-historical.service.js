@@ -1,8 +1,12 @@
 export default class sentenceHistoricalService {
 
-    constructor() {
-		this.sentences  = [];
-		this.categories = [];
+    constructor($localStorage) {
+        this.local = $localStorage.$default({
+             sentences  : [],
+             categories : []
+        });
+		this.sentences  = $localStorage.sentences;
+		this.categories = $localStorage.categories;
     }
 
     add(sentence) {
@@ -10,7 +14,8 @@ export default class sentenceHistoricalService {
     }
 
     addCategory(category){
-        this.categories = _.union(this.categories,category);
+        this.local.categories = _.union(this.categories,category);
+        this.categories       = _.union(this.categories,category);
     }
 
     get() {
@@ -21,3 +26,5 @@ export default class sentenceHistoricalService {
     	return this.categories;
     }
 }
+
+sentenceHistoricalService.$inject = ['$localStorage'];

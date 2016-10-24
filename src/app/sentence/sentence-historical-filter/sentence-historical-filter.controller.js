@@ -1,7 +1,7 @@
 export default class SentenceHistoricalFilterController {
 
   constructor($log,sentenceHistoricalService, sentenceHistoricalFilterService) {
-  	 this.$log 					          = $log;
+  	   this.$log                    = $log;
 	   this.historicalService       = sentenceHistoricalService;
 	   this.historicalFilterService = sentenceHistoricalFilterService;
   }  
