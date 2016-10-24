@@ -22,6 +22,9 @@ export default class SentenceHistoricalController {
     return this.historicalFilterService.isEmpty();
   }
 
+  clearCache() {
+    this.historicalService.clearCache();
+  }
 }
 
 SentenceHistoricalController.$inject = [

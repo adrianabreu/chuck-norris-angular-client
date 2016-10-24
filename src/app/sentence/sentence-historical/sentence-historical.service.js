@@ -22,8 +22,19 @@ export default class sentenceHistoricalService {
         return this.sentences;
     }
 
-    getCategories(){
+    getCategories() {
     	return this.categories;
+    }
+
+    clearCache() {
+        this.local.$reset({
+             sentences  : [],
+             categories : []
+        });
+
+        this.sentences  = this.local.sentences;
+        this.categories = this.local.categories;
+
     }
 }
 

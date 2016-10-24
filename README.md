@@ -21,7 +21,7 @@ A client for Chuck Norris' API made in AngularJS & Webpack.
 6. Create historical component [Done]
 7. Create historical filters [Done]
 8. Apply filter on historical (refactor old filters) [Done]
-9. Manage cache [Need to add a button for cleaning cache]
+9. Manage cache [Done]
 
 
 ### Extra packages added

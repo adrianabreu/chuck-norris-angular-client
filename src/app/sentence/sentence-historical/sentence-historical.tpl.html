@@ -1,6 +1,12 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-    <h5>Historical</h5>
+        <div class="panel-title pull-left">
+            <h5>Historical</h5>
+        </div>
+        <div class="panel-title pull-right">
+            <img ng-src="/img/sweep.png" id="sweep-img" ng-click="sentenceHistorical.clearCache()">
+        </div>
+        <div class="clearfix"></div>
     </div>
     <div class="panel-body text-center" id="panel-body-sentence-historical">
         <ul class="list-group">
