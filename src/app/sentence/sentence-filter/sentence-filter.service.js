@@ -4,8 +4,10 @@ export default class sentenceFilterService {
 	    this.activeFilters = [];
     }
 
-    add(filter) {
-        this.activeFilters.push(filter);
+    toogle(filter) {
+        (!this.isActive(filter)) ?
+            this.activeFilters.push(filter) :
+        this.activeFilters.splice(this.activeFilters.indexOf(filter), 1);    
     }
 
     isActive(filter) {

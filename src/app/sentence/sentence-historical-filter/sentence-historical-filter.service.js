@@ -4,8 +4,14 @@ export default class sentenceHistoricalFilterService {
 	    this.activeFilters = [];
     }
 
-    add(filter) {
-        this.activeFilters.push(filter);
+    toogle(filter) {
+        if ( !this.isActiveClass(filter) ) {
+            this.activeFilters.push(filter);
+        }  else {
+            
+            this.activeFilters.splice(this.activeFilters.indexOf(filter), 1);
+        }
+        
     }
 
     isActive(filter) {
@@ -13,6 +19,8 @@ export default class sentenceHistoricalFilterService {
     }
 
     isActiveClass(filter){
+        //We store the value as plain, so we have to compare making it an array
+        //in isActvie that's not necessary because it is an array
         return _.size(_.intersection(this.activeFilters,[filter])) > 0;    
     }
 

@@ -10,9 +10,9 @@ export default class SentenceHistoricalFilterController {
   	return this.historicalService.getCategories();
   }
 
-  addFilter(pFilter) {
+  toogleFilter(pFilter) {
       this.$log.debug('SentenceHistoricalFilterController.addFilter:'+ pFilter);
-      this.historicalFilterService.add(pFilter);
+      this.historicalFilterService.toogle(pFilter);
   }
 
   isActiveFilter(pFilter) {

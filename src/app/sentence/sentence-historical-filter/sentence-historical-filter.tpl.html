@@ -1,7 +1,7 @@
 <div class="btn-group btn-group-justified">
       <a
       ng-repeat="category in sentenceHistoricalFilter.getHistoricalCategories()" 
-      ng-click="sentenceHistoricalFilter.addFilter(category)"
+      ng-click="sentenceHistoricalFilter.toogleFilter(category)"
       ng-class  = "(sentenceHistoricalFilter.isActiveFilter(category) ? 'btn btn-primary' : 'btn btn-default')"
       >
       	{{category}}

@@ -17,9 +17,9 @@ export default class SentenceFilterController {
   		});
   }
 
-  addFilter(pFilter) {
+  toogleFilter(pFilter) {
       this.$log.debug('SentenceFilterController.addFilter:'+ pFilter);
-      this.filterService.add(pFilter);
+      this.filterService.toogle(pFilter);
   }
 
   isActiveFilter(pFilter) {
