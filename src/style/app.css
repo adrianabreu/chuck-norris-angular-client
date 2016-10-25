@@ -36,14 +36,10 @@ footer {
 }
 
 #chuck-img{
-  width: 53px;
   margin-top: 4px;
-  margin-bottom: -18px;
-  margin-right: 10px;
 }
 
 #sweep-img{
-  width: 53px;
   margin-top: 4px;
   margin-right: 10px;
   cursor: pointer;
