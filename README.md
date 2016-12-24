@@ -4,7 +4,7 @@ A client for Chuck Norris' API made in AngularJS & Webpack.
 
 ### Try live!
 
-[https://aabreuglez.github.io/chuck-norris-angular-client/](https://aabreuglez.github.io/chuck-norris-angular-client/)
+[https://adrianabreu.github.io/chuck-norris-angular-client/#/sentence](https://adrianabreu.github.io/chuck-norris-angular-client/#/sentence)
 
 ### Screenshots
 
