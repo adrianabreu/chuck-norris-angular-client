@@ -35,4 +35,6 @@ npm install --save ngstorage
 npm install typings --save-dev
 npm install ts-loader --save-dev
 npm install typescript --save-dev
+npm install @types/node --save-dev
+npm install @types/angular --save
 ```

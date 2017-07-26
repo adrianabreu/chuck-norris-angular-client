@@ -3,3 +3,4 @@ dist
 coverage
 /nbproject/private/
 typings
+yarn.lock
