@@ -1,0 +1,13 @@
+<div class="btn-group btn-group-justified">
+      <a href=""
+        ng-class  = "($ctrl.isActiveFilter(filter) ? 'btn btn-primary' : 'btn btn-default')"
+        ng-repeat = "filter in $ctrl.filters"
+        ng-click  = "$ctrl.toogleFilter(filter)">
+        {{ filter }}
+        </a>
+      <a href=""
+      class="btn btn-default"
+      ng-click="$ctrl.clearFilter()">
+      clear
+      </a>
+</div>

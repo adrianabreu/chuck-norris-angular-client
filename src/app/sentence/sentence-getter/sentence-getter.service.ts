@@ -1,4 +1,4 @@
-export default function sentenceGetterService($log, $resource, sentenceHistoricalService){
+export function SentenceGetterService($log, $resource, sentenceHistoricalService){
 	return $resource('https://api.icndb.com/jokes/random', {}, {
 		get : {
 			interceptor : {
@@ -14,7 +14,7 @@ export default function sentenceGetterService($log, $resource, sentenceHistorica
 	});
 }
 
-sentenceGetterService.$inject = [
+SentenceGetterService.$inject = [
 	'$log',
 	'$resource', 
 	'sentenceHistoricalService'

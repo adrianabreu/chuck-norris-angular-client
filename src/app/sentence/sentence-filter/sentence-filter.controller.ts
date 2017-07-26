@@ -1,14 +1,13 @@
-export default class SentenceFilterController {
+export class SentenceFilterController {
 
-  constructor($log, getterService, filterService) {
+  public filters: string[];
+  
+  constructor(private $log, private getterService, private filterService) {
     this.filters       = [];    
-    this.$log          = $log;
-    this.getterService = getterService;
-    this.filterService = filterService;
-    this.get();
+    this.getFilters();
   }
 
-  get(){
+  getFilters(){
     this.getterService
   		.get()
   		.$promise
@@ -34,5 +33,5 @@ export default class SentenceFilterController {
 SentenceFilterController.$inject = [
   '$log',
   'sentenceFilterGetterService', 
-  'sentenceFilterService'
+  'SentenceFilterService'
 ];

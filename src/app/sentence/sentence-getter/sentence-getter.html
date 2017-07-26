@@ -1,13 +1,13 @@
 <div class="panel panel-default">
   <div class="panel-heading">
   	<button 
-  		ng-click="sentenceGetter.get()"
+  		ng-click="$ctrl.get()"
   		type="button control-group" class="btn btn-default btn-block">GET IT
   	</button>	
   </div>
   <div class="panel-body text-center">  	  	
-  	<blockquote ng-bind-html="sentenceGetter.sentence" id="blockquote-sentence-getter">
+  	<blockquote ng-bind-html="$ctrl.sentence" id="blockquote-sentence-getter">
   	</blockquote>
-  	<footer ng-if="sentenceGetter.sentenceRequested"><i>Chuck Norris</i></footer>
+  	<footer ng-if="$ctrl.sentenceRequested"><i>Chuck Norris</i></footer>
   </div>
 </div>

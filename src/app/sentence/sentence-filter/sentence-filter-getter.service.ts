@@ -1,4 +1,4 @@
-export default function sentenceFilterGetterService($resource){
+export function sentenceFilterGetterService($resource){
 	return $resource('https://api.icndb.com/categories');
 }
 
