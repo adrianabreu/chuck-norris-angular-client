@@ -32,4 +32,7 @@ npm install --save angular-route
 npm install --save bootstrap 
 npm install --save lodash
 npm install --save ngstorage
+npm install typings --save-dev
+npm install ts-loader --save-dev
+npm install typescript --save-dev
 ```
