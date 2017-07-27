@@ -1,9 +1,7 @@
 export default function sentenceConfig($routeProvider){
   $routeProvider
     .when('/sentence', {
-      template: require('./sentence.tpl.html'),
-      controller: 'SentenceController',
-      controllerAs : 'Sentence'
+      template: require('./sentence.html')
     })
 }
 

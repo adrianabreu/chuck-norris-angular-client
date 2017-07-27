@@ -1,24 +1,23 @@
+import angular from 'angular';
 import sentenceRun              from './sentence.run.js';
 import sentenceConfig     		from './sentence.config.js';
-import SentenceController 		from './sentence.controller.js';
 
 import SentenceGetterModule		from './sentence-getter/sentence-getter.module';
 import SentenceFilterModule 	from './sentence-filter/sentence-filter.module';
-import sentenceHistorical 		from './sentence-historical/sentence-historical.js';
-import sentenceHistoricalFilter from './sentence-historical-filter/sentence-historical-filter.js'
+import SentenceHistoricalModule from './sentence-historical/sentence-historical.module';
+import SentenceHistoricalFilterModule from './sentence-historical-filter/sentence-historical-filter.module'
 
 const DEPENDENCIES = [
 	SentenceGetterModule,
 	SentenceFilterModule,
-	sentenceHistorical,
-	sentenceHistoricalFilter
+	SentenceHistoricalModule,
+	SentenceHistoricalFilterModule
 ];
 
 const MODULE_NAME  = 'sentence';
 
 angular
 	.module('sentence',DEPENDENCIES)
-	.controller('SentenceController',SentenceController)
 	.run(sentenceRun)
 	.config(sentenceConfig);
 

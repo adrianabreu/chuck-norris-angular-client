@@ -1,0 +1,14 @@
+<div class="btn-group btn-group-justified">
+      <a
+      ng-repeat="category in $ctrl.getHistoricalCategories()" 
+      ng-click="$ctrl.toogleFilter(category)"
+      ng-class  = "($ctrl.isActiveFilter(category) ? 'btn btn-primary' : 'btn btn-default')"
+      >
+      	{{category}}
+      </a>           
+      <a href=""
+      class="btn btn-default"
+      ng-click="$ctrl.clearFilter()">
+      clear
+      </a>
+</div>

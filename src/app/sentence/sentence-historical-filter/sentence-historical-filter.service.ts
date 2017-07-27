@@ -1,4 +1,8 @@
-export default class sentenceHistoricalFilterService {
+import * as  _ from 'lodash';
+
+export  class SentenceHistoricalFilterService {
+
+    private activeFilters: string[];
 
 	constructor() {
 	    this.activeFilters = [];
@@ -8,7 +12,6 @@ export default class sentenceHistoricalFilterService {
         if ( !this.isActiveClass(filter) ) {
             this.activeFilters.push(filter);
         }  else {
-            
             this.activeFilters.splice(this.activeFilters.indexOf(filter), 1);
         }
         

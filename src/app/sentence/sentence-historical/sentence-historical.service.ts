@@ -1,6 +1,17 @@
-export default class sentenceHistoricalService {
+import * as _ from 'lodash';
+import { ngStorage } from 'ngstorage';
 
-    constructor($localStorage) {
+export class SentenceHistoricalService {
+
+    private sentences: string[];
+    private categories: string[];
+    public  local:any;
+
+    static $inject = [
+        '$localStorage'
+    ];
+
+    constructor($localStorage: ngStorage.StorageService) {
         this.local = $localStorage.$default({
              sentences  : [],
              categories : []
@@ -37,5 +48,3 @@ export default class sentenceHistoricalService {
 
     }
 }
-
-sentenceHistoricalService.$inject = ['$localStorage'];
