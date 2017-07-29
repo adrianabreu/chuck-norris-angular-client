@@ -82,14 +82,13 @@ module.exports = function makeWebpackConfig() {
 
     // Initialize module
     config.module = {
-        preLoaders: [],
         loaders: [{
                 // JS LOADER
                 // Reference: https://github.com/babel/babel-loader
                 // Transpile .js files using babel-loader
                 // Compiles ES6 and ES7 into ES5 code
                 test: /\.js$/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 exclude: /node_modules/
             }, {
                 // CSS LOADER
@@ -104,7 +103,10 @@ module.exports = function makeWebpackConfig() {
                 //
                 // Reference: https://github.com/webpack/style-loader
                 // Use style-loader in development.
-                loader: isTest ? 'null' : ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!postcss-loader')
+                loader: isTest ? 'null' : ExtractTextPlugin.extract({ 
+                    fallback: 'style-loader', 
+                    use: 'css-loader?sourceMap!postcss-loader' 
+                })
             }, {
                 // ASSET LOADER
                 // Reference: https://github.com/webpack/file-loader
@@ -113,25 +115,19 @@ module.exports = function makeWebpackConfig() {
                 // Pass along the updated reference to your code
                 // You can add here any file extension you want to get copied to your output
                 test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
-                loader: 'file'
+                loader: 'file-loader'
             }, {
                 // HTML LOADER
                 // Reference: https://github.com/webpack/raw-loader
                 // Allow loading html through js
                 test: /\.html$/,
-                loader: 'raw'
+                loader: 'raw-loader'
             }, {
                 // ts-loader: convert typescript (es6) to javascript (es6),
                 // babel-loader: converts javascript (es6) to javascript (es5)
-                'test': /\.tsx?$/,
+                'test': /\.ts?$/,
                 'loaders': ['babel-loader', 'ts-loader'],
-                'exclude': [/node_modules/, nodeModulesPath]
-            },
-            // babel-loader for pure javascript (es6) => javascript (es5)
-            {
-                'test': /\.(jsx?)$/,
-                'loaders': ['babel'],
-                'exclude': [/node_modules/, nodeModulesPath]
+                'exclude': [/node_modules/]
             }
         ]
     };
@@ -152,17 +148,6 @@ module.exports = function makeWebpackConfig() {
     }
 
     /**
-     * PostCSS
-     * Reference: https://github.com/postcss/autoprefixer-core
-     * Add vendor prefixes to your css
-     */
-    config.postcss = [
-        autoprefixer({
-            browsers: ['last 2 version']
-        })
-    ];
-
-    /**
      * Plugins
      * Reference: http://webpack.github.io/docs/configuration.html#plugins
      * List: http://webpack.github.io/docs/list-of-plugins.html
@@ -181,8 +166,10 @@ module.exports = function makeWebpackConfig() {
                 // Reference: https://github.com/webpack/extract-text-webpack-plugin
                 // Extract css files
                 // Disabled when in test mode or not in build mode
-                new ExtractTextPlugin('[name].[hash].css', {disable: !isProd})
-                )
+                new ExtractTextPlugin({
+                    filename: '[name].[hash].css', 
+                    disable: !isProd
+                }))
     }
 
     // Add build specific plugins
@@ -191,12 +178,16 @@ module.exports = function makeWebpackConfig() {
                 // Reference: http://webpack.github.io/docs/list-of-plugins.html#noerrorsplugin
                 // Only emit files when there are no errors
                 new webpack.NoErrorsPlugin(),
-                // Reference: http://webpack.github.io/docs/list-of-plugins.html#dedupeplugin
-                // Dedupe modules in the output
-                new webpack.optimize.DedupePlugin(),
                 // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
                 // Minify all javascript, switch loaders to minimizing mode
-                new webpack.optimize.UglifyJsPlugin(),
+                new webpack.optimize.UglifyJsPlugin({
+                    compress : {
+                        warnings: true
+                    }
+                }),
+                new webpack.LoaderOptionsPlugin({
+                    minimize: true
+                }),
                 // Copy assets from the public folder
                 // Reference: https://github.com/kevlened/copy-webpack-plugin
                 new CopyWebpackPlugin([{
@@ -216,8 +207,11 @@ module.exports = function makeWebpackConfig() {
     };
 
     config.resolve = {
-        'root': [path.resolve('./src')],
-        'extensions': ['', '.js', '.jsx', '.ts', '.tsx']
+        modules: [
+            path.join(__dirname, 'src'),
+            'node_modules'
+        ],
+        'extensions': ['.js', '.ts']
     };
 
     return config;

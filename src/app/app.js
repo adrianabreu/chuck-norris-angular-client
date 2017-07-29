@@ -8,16 +8,16 @@ import ngRoute    from 'angular-route';
 import ngResource from 'angular-resource';
 import ngStorage  from 'ngstorage';
 
-import sentence   from './sentence/sentence.js';
-import appConfig  from './app.config.js';
-import appRun     from './app.run.js';
+import sentenceModule   from './sentence/sentence.module';
+import appConfig  from './app.config';
+import appRun     from './app.run';
 
 const MODULE_NAME  = 'chuck';
 const DEPENDENCIES = [
   ngRoute,
   ngResource,
   ngStorage.name,
-  sentence
+  sentenceModule
 ];
 
 angular

@@ -1,6 +1,6 @@
 import angular from 'angular';
-import sentenceRun              from './sentence.run.js';
-import sentenceConfig     		from './sentence.config.js';
+import sentenceRun              from './sentence.run';
+import sentenceConfig     		from './sentence.config';
 
 import SentenceGetterModule		from './sentence-getter/sentence-getter.module';
 import SentenceFilterModule 	from './sentence-filter/sentence-filter.module';
