@@ -22,6 +22,9 @@
   "dependencies": {
     "@types/angular": "^1.6.27",
     "@types/angular-resource": "^1.5.12",
+    "@uirouter/angularjs": "^1.0.5",
+    "@uirouter/core": "^5.0.5",
+    "@uirouter/visualizer": "^4.0.0",
     "angular": "^1.5.0",
     "angular-resource": "^1.5.8",
     "angular-route": "^1.5.8",

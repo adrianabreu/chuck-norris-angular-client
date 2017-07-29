@@ -1,8 +1,11 @@
-export default function sentenceConfig($routeProvider){
-  $routeProvider
-    .when('/sentence', {
-      template: require('./sentence.html')
-    })
+import { StateProvider } from '@uirouter/angularjs';
+
+export default function sentenceConfig($stateProvider: StateProvider) {
+  $stateProvider.state({    
+    name: 'sentence',
+    url: '/sentence',
+    template: require('./sentence.html')
+  });
 }
 
-sentenceConfig.$inject = ['$routeProvider'];
+sentenceConfig.$inject = ['$stateProvider'];

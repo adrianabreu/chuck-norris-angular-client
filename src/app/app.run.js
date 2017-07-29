@@ -1,5 +1,9 @@
-export default function appRun(){
-    console.log('chuck module running')
+import { Visualizer } from '@uirouter/visualizer';
+
+export default function appRun($uiRouter){
+    $uiRouter.plugin(Visualizer);
 }
 
-appRun.$inject = [];
+appRun.$inject = [
+    '$uiRouter'
+];

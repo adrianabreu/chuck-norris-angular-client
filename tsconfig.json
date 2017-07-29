@@ -4,7 +4,8 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "allowJs": true,
-    "outDir": "build"
+    "outDir": "build",
+    "moduleResolution": "node"
   },
   "exclude": ["node_modules"],
   "files": ["typings/index.d.ts"]
