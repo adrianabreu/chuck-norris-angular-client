@@ -1,3 +1,7 @@
+@import './_variables.scss';
+@import './_vendor.scss';
+@import './_mixins.scss';
+
 /* styles in src/style directory are applied to the whole page */
 body {
   /*background: #0147A7;*/
@@ -6,7 +10,7 @@ body {
 }
 
 a {
-  color: #03A9F4;
+  color: $main-color;
 }
 
 main {

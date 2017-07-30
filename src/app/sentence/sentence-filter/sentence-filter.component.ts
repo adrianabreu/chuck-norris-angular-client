@@ -4,7 +4,8 @@ import { IComponentController } from 'angular';
 
 @Component({
     selector: 'sentence-filter',
-    template: require('./sentence-filter.html')
+    template: require('./sentence-filter.html'),
+    styles: [require('./sentence-filter.scss')]
 })
 export class SentenceFilterComponent implements IComponentController {
 

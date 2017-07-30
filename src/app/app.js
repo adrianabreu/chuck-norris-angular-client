@@ -1,6 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../style/app.css';
-import '../style/bootstrap.theme.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import '../style/styles.scss';
 
 import lodash     from 'lodash';
 import angular    from 'angular';
