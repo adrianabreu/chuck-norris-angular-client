@@ -1,24 +1,39 @@
-import angular from 'angular';
-import sentenceRun              from './sentence.run';
-import sentenceConfig     		from './sentence.config';
+import { NgModule } from 'angular-ts-decorators';
 
-import SentenceGetterModule		from './sentence-getter/sentence-getter.module';
-import SentenceFilterModule 	from './sentence-filter/sentence-filter.module';
-import SentenceHistoricalModule from './sentence-historical/sentence-historical.module';
-import SentenceHistoricalFilterModule from './sentence-historical-filter/sentence-historical-filter.module'
+import { SentenceGetterComponent } from './sentence-getter/sentence-getter.component';
+import { SentenceFilterComponent } from './sentence-filter/sentence-filter.component';
+import { SentenceHistoricalComponent } from './sentence-historical/sentence-historical.component';
+import { SentenceHistoricalFilterComponent } from './sentence-historical-filter/sentence-historical-filter.component';
 
-const DEPENDENCIES = [
-	SentenceGetterModule,
-	SentenceFilterModule,
-	SentenceHistoricalModule,
-	SentenceHistoricalFilterModule
-];
+import { SentenceFilterService } from './sentence-filter.service'; 
+import { SentenceGetterService } from './sentence-getter.service';
+import { SentenceHistoricalService } from './sentence-historical.service';
+import { SentenceHistoricalFilterService } from './sentence-historical-filter.service';
 
-const MODULE_NAME  = 'sentence';
+import { StateProvider } from '@uirouter/angularjs';
 
-angular
-	.module('sentence',DEPENDENCIES)
-	.run(sentenceRun)
-	.config(sentenceConfig);
-
-export default MODULE_NAME;
+@NgModule({
+	id: SentenceModule.name,
+	declarations: [
+		SentenceGetterComponent,
+		SentenceFilterComponent,
+		SentenceHistoricalComponent,
+		SentenceHistoricalFilterComponent,
+	],
+	providers: [
+		SentenceGetterService,
+		SentenceFilterService,
+		SentenceHistoricalService,
+		SentenceHistoricalFilterService,
+	],
+	exports: []
+})
+export class SentenceModule {
+	public static config($stateProvider: StateProvider) {
+		$stateProvider.state({
+			name: 'sentence',
+			url: '/sentence',
+			template: require('./sentence.html')
+		});
+	}
+}

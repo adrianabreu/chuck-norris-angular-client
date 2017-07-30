@@ -1,9 +1,20 @@
+import { IHttpPromise, IHttpService } from 'angular';
+import { Injectable } from 'angular-ts-decorators';
+
+@Injectable(SentenceFilterService.name)
 export class SentenceFilterService {
 
     private activeFilters: string[];
+    private filtersUrl = 'https://api.icndb.com/categories';
 
-    constructor() {
+    static $inject = ['$http'];
+
+    constructor(private $http: IHttpService) {
 	    this.activeFilters = [];
+    }
+
+    getFilters(): IHttpPromise<any> {
+        return this.$http.get(this.filtersUrl);
     }
 
     toogle(filter) {

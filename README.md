@@ -42,3 +42,12 @@ npm install @types/ngstorage --save-dev
 
 
 ```
+
+
+### Issues with Typescript integration
+
+When using async / await the view model doesn't update, 
+https://stackoverflow.com/questions/39943937/typescript-async-await-doesnt-update-angularjs-view
+
+So, you can use this library https://stackoverflow.com/questions/39943937/typescript-async-await-doesnt-update-angularjs-view.
+In this project we decide not use async / await for it's verbose

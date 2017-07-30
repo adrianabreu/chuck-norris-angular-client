@@ -28,6 +28,7 @@
     "angular": "^1.5.0",
     "angular-resource": "^1.5.8",
     "angular-route": "^1.5.8",
+    "angular-ts-decorators": "1.2.4",
     "bootstrap": "^3.3.7",
     "lodash": "^4.16.4",
     "ngstorage": "^0.3.11"

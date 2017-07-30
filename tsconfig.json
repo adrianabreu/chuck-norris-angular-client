@@ -5,6 +5,7 @@
     "sourceMap": true,
     "allowJs": true,
     "outDir": "build",
+    "experimentalDecorators": true,
     "moduleResolution": "node"
   },
   "exclude": ["node_modules"],

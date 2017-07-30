@@ -8,10 +8,10 @@ import ngRoute    from 'angular-route';
 import ngResource from 'angular-resource';
 import ngStorage  from 'ngstorage';
 
-import uiRouterCore      from '@uirouter/core';
-import uiRouterAngularJs from '@uirouter/angularjs';
+// TODO : search module name
+import '@uirouter/angularjs';
+import { SentenceModule }   from './sentence/sentence.module';
 
-import sentenceModule   from './sentence/sentence.module';
 import appConfig  from './app.config';
 import appRun     from './app.run';
 
@@ -22,11 +22,11 @@ const DEPENDENCIES = [
   ngResource,
   ngStorage.name,
   'ui.router',
-  sentenceModule
+  SentenceModule.name
 ];
 
 angular
-  .module(MODULE_NAME, DEPENDENCIES)
+  .module(MODULE_NAME, DEPENDENCIES)  
   .run(appRun)
   .config(appConfig);
 
