@@ -3,7 +3,7 @@ import { ngStorage } from 'ngstorage';
 import { Injectable } from 'angular-ts-decorators';
 
 
-@Injectable(SentenceHistoricalService.name)
+@Injectable('SentenceHistoricalService')
 export class SentenceHistoricalService {
 
     private sentences: string[];

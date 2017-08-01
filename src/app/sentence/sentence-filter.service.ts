@@ -1,7 +1,7 @@
 import { IHttpPromise, IHttpService } from 'angular';
 import { Injectable } from 'angular-ts-decorators';
 
-@Injectable(SentenceFilterService.name)
+@Injectable('SentenceFilterService')
 export class SentenceFilterService {
 
     private activeFilters: string[];

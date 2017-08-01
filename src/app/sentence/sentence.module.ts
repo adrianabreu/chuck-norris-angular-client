@@ -21,7 +21,7 @@ import { StateProvider } from '@uirouter/angularjs';
 		SentenceHistoricalFilterComponent,
 	],
 	providers: [
-		SentenceGetterService,
+		{ provide: 'SentenceGetterService', useClass: SentenceGetterService},
 		SentenceFilterService,
 		SentenceHistoricalService,
 		SentenceHistoricalFilterService,
@@ -29,6 +29,7 @@ import { StateProvider } from '@uirouter/angularjs';
 	exports: []
 })
 export class SentenceModule {
+	/*@ngInject*/
 	public static config($stateProvider: StateProvider) {
 		$stateProvider.state({
 			name: 'sentence',

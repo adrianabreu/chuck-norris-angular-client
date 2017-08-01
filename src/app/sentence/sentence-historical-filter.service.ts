@@ -1,7 +1,7 @@
 import * as  _ from 'lodash';
 import { Injectable } from 'angular-ts-decorators';
 
-@Injectable(SentenceHistoricalFilterService.name)
+@Injectable('SentenceHistoricalFilterService')
 export class SentenceHistoricalFilterService {
 
     private activeFilters: string[];

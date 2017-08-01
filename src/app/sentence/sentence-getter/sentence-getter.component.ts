@@ -17,9 +17,9 @@ export class SentenceGetterComponent {
 	public static $inject: string[] = [
 		'$sce',
 		'$scope',
-		SentenceGetterService.name,
-		SentenceFilterService.name,
-  	SentenceHistoricalService.name
+		'SentenceGetterService',
+		'SentenceFilterService',
+  		'SentenceHistoricalService'
 	];
 
 	constructor(

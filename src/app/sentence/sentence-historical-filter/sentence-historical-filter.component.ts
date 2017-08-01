@@ -9,8 +9,8 @@ import { SentenceHistoricalFilterService } from '../sentence-historical-filter.s
 export class SentenceHistoricalFilterComponent {
 	  public static $inject = [
 		'$log',
-		SentenceHistoricalService.name,
-		SentenceHistoricalFilterService.name
+		'SentenceHistoricalService',
+		'SentenceHistoricalFilterService'
   ];  
 
   constructor(

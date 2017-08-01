@@ -1,25 +1,24 @@
 import { Component } from 'angular-ts-decorators';
 import { SentenceFilterService } from '../sentence-filter.service';
-import { IComponentController } from 'angular';
 
 @Component({
     selector: 'sentence-filter',
     template: require('./sentence-filter.html'),
     styles: [require('./sentence-filter.scss')]
 })
-export class SentenceFilterComponent implements IComponentController {
+export class SentenceFilterComponent {
 
     public static $inject = [
         '$log',
         '$timeout',
-        SentenceFilterService.name
+        'SentenceFilterService'
     ];
     public filters: string[] = [];
 
     constructor(private $log, private $timeout, private filterService: SentenceFilterService) {
         this.getFilters();
-    }    
-
+    }
+    
     private getFilters() {
         this.filterService
             .getFilters()
