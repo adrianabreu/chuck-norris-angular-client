@@ -8,6 +8,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node"
   },
-  "exclude": ["node_modules"],
-  "files": ["typings/index.d.ts"]
+  "exclude": [
+    "node_modules"
+  ]
 }
