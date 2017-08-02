@@ -49,7 +49,7 @@ module.exports = function makeWebpackConfig() {
 
         // Output path from the view of the page
         // Uses webpack-dev-server in development
-        publicPath: isProd ? '/' : 'http://localhost:8080/',
+        publicPath: isProd ? '/chuck-norris-angular-client/' : 'http://localhost:8080/',
 
         // Filename for entry points
         // Only adds hash in build mode
@@ -83,52 +83,52 @@ module.exports = function makeWebpackConfig() {
     // Initialize module
     config.module = {
         loaders: [{
-                // JS LOADER
-                // Reference: https://github.com/babel/babel-loader
-                // Transpile .js files using babel-loader
-                // Compiles ES6 and ES7 into ES5 code
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/
-            }, {
-                // CSS LOADER
-                // Reference: https://github.com/webpack/css-loader
-                // Allow loading css through js
-                //
-                // Reference: https://github.com/postcss/postcss-loader
-                // Postprocess your css with PostCSS plugins
-                test: /\.scss$/,
-                // Reference: https://github.com/webpack/extract-text-webpack-plugin
-                // Extract css files in production builds
-                //
-                // Reference: https://github.com/webpack/style-loader
-                // Use style-loader in development.
-                loader: isTest ? 'null' : ExtractTextPlugin.extract({ 
-                    fallback: 'style-loader', 
-                    use: 'css-loader!sass-loader' 
-                })
-            }, {
-                // ASSET LOADER
-                // Reference: https://github.com/webpack/file-loader
-                // Copy png, jpg, jpeg, gif, svg, woff, woff2, ttf, eot files to output
-                // Rename the file using the asset hash
-                // Pass along the updated reference to your code
-                // You can add here any file extension you want to get copied to your output
-                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
-                loader: 'file-loader'
-            }, {
-                // HTML LOADER
-                // Reference: https://github.com/webpack/raw-loader
-                // Allow loading html through js
-                test: /\.html$/,
-                loader: 'raw-loader'
-            }, {
-                // ts-loader: convert typescript (es6) to javascript (es6),
-                // babel-loader: converts javascript (es6) to javascript (es5)
-                'test': /\.ts?$/,
-                'loaders': ['babel-loader', 'ts-loader'],
-                'exclude': [/node_modules/]
-            }
+            // JS LOADER
+            // Reference: https://github.com/babel/babel-loader
+            // Transpile .js files using babel-loader
+            // Compiles ES6 and ES7 into ES5 code
+            test: /\.js$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/
+        }, {
+            // CSS LOADER
+            // Reference: https://github.com/webpack/css-loader
+            // Allow loading css through js
+            //
+            // Reference: https://github.com/postcss/postcss-loader
+            // Postprocess your css with PostCSS plugins
+            test: /\.scss$/,
+            // Reference: https://github.com/webpack/extract-text-webpack-plugin
+            // Extract css files in production builds
+            //
+            // Reference: https://github.com/webpack/style-loader
+            // Use style-loader in development.
+            loader: isTest ? 'null' : ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: 'css-loader!sass-loader'
+            })
+        }, {
+            // ASSET LOADER
+            // Reference: https://github.com/webpack/file-loader
+            // Copy png, jpg, jpeg, gif, svg, woff, woff2, ttf, eot files to output
+            // Rename the file using the asset hash
+            // Pass along the updated reference to your code
+            // You can add here any file extension you want to get copied to your output
+            test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+            loader: 'file-loader'
+        }, {
+            // HTML LOADER
+            // Reference: https://github.com/webpack/raw-loader
+            // Allow loading html through js
+            test: /\.html$/,
+            loader: 'raw-loader'
+        }, {
+            // ts-loader: convert typescript (es6) to javascript (es6),
+            // babel-loader: converts javascript (es6) to javascript (es5)
+            'test': /\.ts?$/,
+            'loaders': ['babel-loader', 'ts-loader'],
+            'exclude': [/node_modules/]
+        }
         ]
     };
 
@@ -159,41 +159,41 @@ module.exports = function makeWebpackConfig() {
         // Reference: https://github.com/ampedandwired/html-webpack-plugin
         // Render index.html
         config.plugins.push(
-                new HtmlWebpackPlugin({
-                    template: './src/public/index.html',
-                    inject: 'body'
-                }),
-                // Reference: https://github.com/webpack/extract-text-webpack-plugin
-                // Extract css files
-                // Disabled when in test mode or not in build mode
-                new ExtractTextPlugin({
-                    filename: '[name].[hash].css', 
-                    disable: !isProd
-                }))
+            new HtmlWebpackPlugin({
+                template: './src/public/index.html',
+                inject: 'body'
+            }),
+            // Reference: https://github.com/webpack/extract-text-webpack-plugin
+            // Extract css files
+            // Disabled when in test mode or not in build mode
+            new ExtractTextPlugin({
+                filename: '[name].[hash].css',
+                disable: !isProd
+            }))
     }
 
     // Add build specific plugins
     if (isProd) {
         config.plugins.push(
-                // Reference: http://webpack.github.io/docs/list-of-plugins.html#noerrorsplugin
-                // Only emit files when there are no errors
-                new webpack.NoEmitOnErrorsPlugin(),
-                // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
-                // Minify all javascript, switch loaders to minimizing mode
-                new webpack.optimize.UglifyJsPlugin({
-                    compress : {
-                        warnings: true
-                    }
-                }),
-                new webpack.LoaderOptionsPlugin({
-                    minimize: true
-                }),
-                // Copy assets from the public folder
-                // Reference: https://github.com/kevlened/copy-webpack-plugin
-                new CopyWebpackPlugin([{
-                        from: __dirname + '/src/public'
-                    }])
-                )
+            // Reference: http://webpack.github.io/docs/list-of-plugins.html#noerrorsplugin
+            // Only emit files when there are no errors
+            new webpack.NoEmitOnErrorsPlugin(),
+            // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
+            // Minify all javascript, switch loaders to minimizing mode
+            new webpack.optimize.UglifyJsPlugin({
+                compress: {
+                    warnings: true
+                }
+            }),
+            new webpack.LoaderOptionsPlugin({
+                minimize: true
+            }),
+            // Copy assets from the public folder
+            // Reference: https://github.com/kevlened/copy-webpack-plugin
+            new CopyWebpackPlugin([{
+                from: __dirname + '/src/public'
+            }])
+        )
     }
 
     /**

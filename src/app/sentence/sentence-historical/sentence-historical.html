@@ -4,20 +4,15 @@
             <h5>Historical</h5>
         </div>
         <div class="panel-title pull-right">
-            <img src="/img/sweep.png" class="img-responsive" id="sweep-img" ng-click="$ctrl.clearCache()">
+            <img src="img/sweep.png" class="img-responsive" id="sweep-img" ng-click="$ctrl.clearCache()">
         </div>
         <div class="clearfix"></div>
     </div>
     <div class="panel-body text-center" id="panel-body-sentence-historical">
         <ul class="list-group">
-            <li 
-            ng-repeat="sentence in $ctrl.getSentences() | orderBy:'':true"
-            ng-if="$ctrl.categoryIsSelected(sentence.categories) 
-                    || $ctrl.categoryFilterIsEmpty()"
-            ng-bind-html="$ctrl.trustAsHtml(sentence.joke)"
-            class="list-group-item"
-            > </li>
+            <li ng-repeat="sentence in $ctrl.getSentences() | orderBy:'':true" ng-if="$ctrl.categoryIsSelected(sentence.categories) 
+                    || $ctrl.categoryFilterIsEmpty()" ng-bind-html="$ctrl.trustAsHtml(sentence.joke)" class="list-group-item">
+            </li>
         </ul>
     </div>
-</div> 
-
+</div>
