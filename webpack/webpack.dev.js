@@ -9,12 +9,13 @@ const ENV = 'dev';
 module.exports = webpackMerge(commonConfig, {
    devServer: {
       contentBase: './src/public',
-      stats: 'minimal'
+      stats: 'minimal',
    },
    devtool: "source-map",
    output: {
-      path: path.resolve('dist'),
+      path: path.resolve('./src/public'),
       filename: '[name].bundle.js',
       chunkFilename: '[id].chunk.js'
-   }
+   },
+
 });

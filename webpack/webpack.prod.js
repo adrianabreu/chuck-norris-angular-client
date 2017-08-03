@@ -4,6 +4,8 @@ const commonConfig = require('./webpack.common.js');
 const webpackMerge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { BaseHrefWebpackPlugin } = require('base-href-webpack-plugin'); // Or `import 'base-href-webpack-plugin';` if using typescript 
+
 const ENV = 'production';
 
 module.exports = webpackMerge(commonConfig, {
@@ -30,7 +32,9 @@ module.exports = webpackMerge(commonConfig, {
          minimize: true
       }),
       new CopyWebpackPlugin([{
-         from: __dirname + '/src/public'
-      }])
+         from: path.resolve('./src/public'),
+         to: path.resolve('./dist')
+      }]),
+      new BaseHrefWebpackPlugin({ baseHref: '/chuck-norris-angular-client/' })
    ],
 });
