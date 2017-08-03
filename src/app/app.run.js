@@ -1,9 +1,6 @@
-import { Visualizer } from '@uirouter/visualizer';
-
-export default function appRun($uiRouter){
-    // $uiRouter.plugin(Visualizer);
+export default function appRun($uiRouter) {
 }
 
 appRun.$inject = [
-    '$uiRouter'
+   '$uiRouter'
 ];
