@@ -1,6 +1,5 @@
 node_modules
-dist
 coverage
-/nbproject/private/
-typings
 yarn.lock
+package-lock.json
+dist

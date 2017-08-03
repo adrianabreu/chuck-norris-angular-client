@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- stable
+
+script: bash ./deploy.sh
+
+env:
+  global:
+  - ENCRYPTION_LABEL: "9851c41efba4"
+  - COMMIT_AUTHOR_EMAIL: "me@adrianabreu.com"
