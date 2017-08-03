@@ -132,9 +132,8 @@ module.exports = function makeWebpackConfig() {
       ]
    };
 
-   // ISPARTA LOADER
-   // Reference: https://github.com/ColCh/isparta-instrumenter-loader
-   // Instrument JS files with Isparta for subsequent code coverage reporting
+   // istanbul-instrumenter-loader
+   // Instrument JS files with istambul for subsequent code coverage reporting
    // Skips node_modules and files that end with .test.js
    if (isTest) {
       config.module.preLoaders.push({
@@ -143,7 +142,7 @@ module.exports = function makeWebpackConfig() {
             /node_modules/,
             /\.spec\.js$/
          ],
-         loader: 'isparta-loader'
+         loader: 'istanbul-instrumenter-loader'
       })
    }
 

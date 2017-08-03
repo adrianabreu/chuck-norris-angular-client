@@ -53,7 +53,7 @@
       "extract-text-webpack-plugin": "2.1.2",
       "file-loader": "^0.11.2",
       "html-webpack-plugin": "^2.7.1",
-      "isparta-loader": "^2.0.0",
+      "istanbul-instrumenter-loader": "^3.0.0",
       "jasmine-core": "^2.3.4",
       "node-libs-browser": "^1.0.0",
       "node-sass": "^4.5.3",
