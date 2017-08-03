@@ -3,9 +3,11 @@
    "version": "1.0.0",
    "description": "A workflow for Angular made with Webpack",
    "scripts": {
-      "build": "rimraf dist/* && webpack --bail --progress --profile",
-      "server": "webpack-dev-server --history-api-fallback --inline --progress",
-      "start": "npm run server"
+      "build": "rimraf dist/* && npm run webpack:prod",
+      "server": "npm run webpack:dev",
+      "start": "npm run server",
+      "webpack:dev": "webpack-dev-server --config webpack/webpack.dev.js --history-api-fallback --inline --progress",
+      "webpack:prod": "webpack --config webpack/webpack.prod.js --bail --progress --profile"
    },
    "repository": {
       "type": "git",
@@ -30,7 +32,8 @@
       "bootstrap-sass": "^3.3.7",
       "bootswatch-sass": "^3.2.0",
       "lodash": "^4.16.4",
-      "ngstorage": "^0.3.11"
+      "ngstorage": "^0.3.11",
+      "webpack-merge": "^4.1.0"
    },
    "devDependencies": {
       "@types/lodash": "^4.14.71",
