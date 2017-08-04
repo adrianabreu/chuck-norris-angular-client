@@ -3,35 +3,35 @@ import { SentenceHistoricalService } from '../sentence-historical.service';
 import { SentenceHistoricalFilterService } from '../sentence-historical-filter.service';
 
 @Component({
-	selector: 'sentence-historical-filter',
-	template: require('./sentence-historical-filter.html'),
+   selector: 'sentenceHistoricalFilter',
+   template: require('./sentence-historical-filter.html'),
 })
 export class SentenceHistoricalFilterComponent {
-	  public static $inject = [
-		'$log',
-		'SentenceHistoricalService',
-		'SentenceHistoricalFilterService'
-  ];  
+   public static $inject = [
+      '$log',
+      'SentenceHistoricalService',
+      'SentenceHistoricalFilterService'
+   ];
 
-  constructor(
+   constructor(
       private $log,
-      private sentenceHistoricalService: SentenceHistoricalService, 
+      private sentenceHistoricalService: SentenceHistoricalService,
       private sentenceHistoricalFilterService: SentenceHistoricalFilterService
-  ) {}  
+   ) { }
 
-  getHistoricalCategories(){
-  	return this.sentenceHistoricalService.getCategories();
-  }
+   getHistoricalCategories() {
+      return this.sentenceHistoricalService.getCategories();
+   }
 
-  toogleFilter(pFilter) {
+   toogleFilter(pFilter) {
       this.sentenceHistoricalFilterService.toogle(pFilter);
-  }
+   }
 
-  isActiveFilter(pFilter: string) {
+   isActiveFilter(pFilter: string) {
       return this.sentenceHistoricalFilterService.isActiveClass(pFilter);
-  }
+   }
 
-  clearFilter() {
+   clearFilter() {
       this.sentenceHistoricalFilterService.clear();
-  }
+   }
 }

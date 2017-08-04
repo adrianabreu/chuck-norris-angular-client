@@ -2,7 +2,7 @@ import { Component } from 'angular-ts-decorators';
 import { SentenceFilterService } from '../sentence-filter.service';
 
 @Component({
-    selector: 'sentence-filter',
+    selector: 'sentenceFilter',
     template: require('./sentence-filter.html'),
     styles: [require('./sentence-filter.scss')]
 })

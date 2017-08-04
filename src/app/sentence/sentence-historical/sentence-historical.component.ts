@@ -1,43 +1,43 @@
-import { Component} from 'angular-ts-decorators';
+import { Component } from 'angular-ts-decorators';
 import { SentenceHistoricalService } from '../sentence-historical.service';
 import { SentenceHistoricalFilterService } from '../sentence-historical-filter.service';
 
 @Component({
-	selector: 'sentence-historical',
-	template: require('./sentence-historical.html')		
+   selector: 'sentenceHistorical',
+   template: require('./sentence-historical.html')
 })
 export class SentenceHistoricalComponent {
-    public static $inject = [
-        '$sce',
-		'SentenceHistoricalService',
-		'SentenceHistoricalFilterService'
-    ];
+   public static $inject = [
+      '$sce',
+      'SentenceHistoricalService',
+      'SentenceHistoricalFilterService'
+   ];
 
-	constructor(
-		private $sce,
-		private sentenceHistoricalService: SentenceHistoricalService,
-		private sentenceHistoricalFilterService: SentenceHistoricalFilterService,
-	) {
-		
-	}
+   constructor(
+      private $sce,
+      private sentenceHistoricalService: SentenceHistoricalService,
+      private sentenceHistoricalFilterService: SentenceHistoricalFilterService,
+   ) {
 
-	trustAsHtml(sentence) {		
-		return this.$sce.trustAsHtml(sentence);
-	}
+   }
 
-	getSentences(){				
-		return this.sentenceHistoricalService.get();
-	}  
+   trustAsHtml(sentence) {
+      return this.$sce.trustAsHtml(sentence);
+   }
 
-	categoryIsSelected(category){
-		return this.sentenceHistoricalFilterService.isActive(category);
-	}
+   getSentences() {
+      return this.sentenceHistoricalService.get();
+   }
 
-	categoryFilterIsEmpty(){
-		return this.sentenceHistoricalFilterService.isEmpty();
-	}
+   categoryIsSelected(category) {
+      return this.sentenceHistoricalFilterService.isActive(category);
+   }
 
-	clearCache() {
-		this.sentenceHistoricalService.clearCache();
-	}
+   categoryFilterIsEmpty() {
+      return this.sentenceHistoricalFilterService.isEmpty();
+   }
+
+   clearCache() {
+      this.sentenceHistoricalService.clearCache();
+   }
 }
