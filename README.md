@@ -1,53 +1,32 @@
-## Angular-chuck-api
+# Chuck-norris-angular-client
 
-A client for Chuck Norris' API made in AngularJS & Webpack.
+A modern approach to AngularJS 1.6 architecture presenting a simple client for a Chuck Norris' API.
 
-### Try live!
+![](assets/chuck.gif)
 
-[https://adrianabreu.github.io/chuck-norris-angular-client/#/sentence](https://adrianabreu.github.io/chuck-norris-angular-client/#/sentence)
+## [Try live!](http://adrianabreu.com/chuck-norris-angular-client/#!/sentence)
 
-### Screenshots
+## Stack used
 
-![Index](assets/1.PNG)
-![Querying](assets/2.PNG)
-
-### Tasks:
-
-1. Grab a sentence [Done]
-2. Apply static filters [Done] 
-3. Grab filters [Done]
-4. Apply filters dynamic [Done]
-5. Make routing /sentence [Done]
-6. Create historical component [Done]
-7. Create historical filters [Done]
-8. Apply filter on historical (refactor old filters) [Done]
-9. Manage cache [Done]
+* Angular 1.6
+* Webpack 2
+* Sass
+* Typescript 2.4.2
+* Yarn
+* Awesome-typescript-loader
 
 
-### Extra packages added
+## Angular archetype
 
-```
-npm install --save angular-resource
-npm install --save angular-route
-npm install --save bootstrap 
-npm install --save lodash
-npm install --save ngstorage
-npm install typings --save-dev
-npm install ts-loader --save-dev
-npm install typescript --save-dev
-npm install @types/node --save-dev
-npm install @types/lodash --save-dev
-npm install @types/angular --save
-npm install @types/ngstorage --save-dev
+This app is built on the latest standars, using components approach. Thanks to [angular-ts-decorators](https://github.com/vsternbach/angular-ts-decorators) the application is really similar to Angular(2+) structure making easier to migrate it.
+
+### This application uses:
+* uirouter
+* ngstorage
+* lodash
+* angular-resource 
 
 
-```
+## Architecture importance
 
-
-### Issues with Typescript integration
-
-When using async / await the view model doesn't update, 
-https://stackoverflow.com/questions/39943937/typescript-async-await-doesnt-update-angularjs-view
-
-So, you can use this library https://stackoverflow.com/questions/39943937/typescript-async-await-doesnt-update-angularjs-view.
-In this project we decide not use async / await for it's verbose
+Also, this architecture gives you a better code structure that get the benefits from Typescript even when some parts of the application keep the old codebase.
