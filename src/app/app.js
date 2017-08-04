@@ -1,4 +1,3 @@
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/styles.scss';
 
 import lodash     from 'lodash';
@@ -7,7 +6,6 @@ import ngRoute    from 'angular-route';
 import ngResource from 'angular-resource';
 import ngStorage  from 'ngstorage';
 
-// TODO : search module name
 import '@uirouter/angularjs';
 import { SentenceModule }   from './sentence/sentence.module';
 
