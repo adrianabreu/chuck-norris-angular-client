@@ -1,5 +1,7 @@
 # Chuck-norris-angular-client
 
+[![Build Status](https://travis-ci.org/adrianabreu/chuck-norris-angular-client.svg?branch=master)](https://travis-ci.org/adrianabreu/chuck-norris-angular-client)
+
 A modern approach to AngularJS 1.6 architecture presenting a simple client for a Chuck Norris' API.
 
 ![](assets/chuck.gif)
