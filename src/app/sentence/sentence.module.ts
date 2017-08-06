@@ -5,10 +5,13 @@ import { SentenceFilterComponent } from './sentence-filter/sentence-filter.compo
 import { SentenceHistoricalComponent } from './sentence-historical/sentence-historical.component';
 import { SentenceHistoricalFilterComponent } from './sentence-historical-filter/sentence-historical-filter.component';
 
-import { SentenceFilterService } from './sentence-filter.service'; 
+import { SentenceFilterService } from './sentence-filter.service';
 import { SentenceGetterService } from './sentence-getter.service';
 import { SentenceHistoricalService } from './sentence-historical.service';
 import { SentenceHistoricalFilterService } from './sentence-historical-filter.service';
+
+import { HttpServiceProvider } from './http-service.provider';
+import { IRandomJoke } from './sentence.model';
 
 import { StateProvider } from '@uirouter/angularjs';
 
@@ -21,20 +24,26 @@ import { StateProvider } from '@uirouter/angularjs';
 		SentenceHistoricalFilterComponent,
 	],
 	providers: [
-		{ provide: 'SentenceGetterService', useClass: SentenceGetterService},
+		{ provide: 'SentenceGetterService', useClass: SentenceGetterService },
 		SentenceFilterService,
 		SentenceHistoricalService,
 		SentenceHistoricalFilterService,
+		{ provide: 'RandomJoke', useClass: HttpServiceProvider },
 	],
 	exports: []
 })
 export class SentenceModule {
 	/*@ngInject*/
-	public static config($stateProvider: StateProvider) {
+	public static config(
+		$stateProvider: StateProvider,
+		RandomJokeProvider: HttpServiceProvider<IRandomJoke>,
+	) {
 		$stateProvider.state({
 			name: 'sentence',
 			url: '/sentence',
 			template: require('./sentence.html')
 		});
+
+		RandomJokeProvider.setUrl('https://api.icndb.com/jokes/random');
 	}
 }
